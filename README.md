@@ -1,5 +1,51 @@
 # Hackathon #1: Oreo Insight Factory 🍪📈
 
+## 🚀 Getting Started
+
+### Prerequisites
+- Java 17 or higher
+- Maven 3.6+
+
+### Running the Application
+
+1. Clone the repository:
+```bash
+git clone https://github.com/alxgr08/Hackaton2-Grupo-4.git
+cd Hackaton2-Grupo-4
+```
+
+2. Build and run the application:
+```bash
+mvn spring-boot:run
+```
+
+3. The application will start on port 8081. Verify the health endpoint:
+```bash
+curl http://localhost:8081/actuator/health
+```
+
+Expected response:
+```json
+{
+  "status": "UP",
+  "components": {
+    "db": {"status": "UP"},
+    "diskSpace": {"status": "UP"},
+    "ping": {"status": "UP"}
+  }
+}
+```
+
+### Available Actuator Endpoints
+- Health: `http://localhost:8081/actuator/health`
+- Info: `http://localhost:8081/actuator/info`
+- Base: `http://localhost:8081/actuator`
+
+### Running Tests
+```bash
+mvn test
+```
+
 ## Descripción General
 
 ¿A quién no le gusta meter una Oreo 🍪 en un vaso con leche 🥛? 
